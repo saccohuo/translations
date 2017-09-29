@@ -21,6 +21,9 @@
     - [4.4 任务同步](#44-%E4%BB%BB%E5%8A%A1%E5%90%8C%E6%AD%A5)
     - [4.5 任务局部性](#45-%E4%BB%BB%E5%8A%A1%E5%B1%80%E9%83%A8%E6%80%A7)
     - [4.6 与其他框架比较](#46-%E4%B8%8E%E5%85%B6%E4%BB%96%E6%A1%86%E6%9E%B6%E6%AF%94%E8%BE%83)
+- [5. 结论](#5-%E7%BB%93%E8%AE%BA)
+- [6. 致谢](#6-%E8%87%B4%E8%B0%A2)
+- [7. 参考资料](#7-%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -279,3 +282,20 @@ if (++base < top) ...
 `FJTask`在处理浮点数组和矩阵的计算上性能表现的比较差。即使`Java`虚拟机性能不断的提升，但是相比于那些`C`和`C++`语言所使用的强大的后端优化器，其竞争力还是不够的。虽然在上面的图表中没有显示，但`FJTask`版本的所有程序都要比那些没有进行编译优化的框架还是运行的快的。以及一些非正式的测试也表明，测试所得的大多数差异都是由于数组边界检查，运行时义务造成的。这也是`Java`虚拟机以及编译器开发者一直以来关注并持续解决的问题。
 
 相比较，计算敏感型程序因为编码质量所引起的性能差异却是很少的。
+
+# 5. 结论
+
+# 6. 致谢
+
+# 7. 参考资料
+
+- [1] Agesen, Ole, David Detlefs, and J. Eliot B. Moss. Garbage Collection and Local Variable Type−Precision and Liveness in Java Virtual Machines. In **_Proceedings of 1998 ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI)_**, 1998.
+- [2] Agesen, Ole, David Detlefs, Alex Garthwaite, Ross Knippel, Y.S. Ramakrishna, and Derek White. An Efficient Meta−lock for Implementing Ubiquitous Synchronization. In **_Proceedings of OOPSLA ’99_**, ACM, 1999.
+- [3] Arora, Nimar, Robert D. Blumofe, and C. Greg Plaxton. Thread Scheduling for Multiprogrammed Multiprocessors. In **_Proceedings of the Tenth Annual ACM Symposium on Parallel Algorithms and Architectures (SPAA)_**, Puerto Vallarta, Mexico, June 28 − July 2, 1998.
+- [4] Blumofe, Robert D. and Dionisios Papadopoulos. **_Hood: A User−Level Threads Library for Multiprogrammed Multiprocessors_**. Technical Report, University of Texas at Austin, 1999.
+- [5] Frigo, Matteo, Charles Leiserson, and Keith Randall. The Implementation of the Cilk−5 Multithreaded Language. In **_Proceedings of 1998 ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI)_**, 1998.
+- [6] Gosling, James, Bill Joy, and Guy Steele. **_The Java Language Specification_**, Addison−Wesley, 1996.
+- [7] Lea, Doug. **_Concurrent Programming in Java, second edition_**, Addison−Wesley, 1999.
+- [8] Lowenthal, David K., Vincent W. Freeh, and Gregory R. Andrews. Efficient Fine−Grain Parallelism on Shared−Memory Machines. **_Concurrency−Practice and Experience_**, 10,3:157−173, 1998.
+- [9] Simpson, David, and F. Warren Burton. Space efficient execution of deterministic parallel programs. **_IEEE Transactions on Software Engineering_**, December, 1999.
+- [10] Taura, Kenjiro, Kunio Tabata, and Akinori Yonezawa. "Stackthreads/MP: Integrating Futures into Calling Standards." In **_Proceedings of ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming (PPoPP)_**, 1999.
